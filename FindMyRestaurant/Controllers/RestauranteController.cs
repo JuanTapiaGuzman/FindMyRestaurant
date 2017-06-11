@@ -19,6 +19,32 @@ namespace FindMyRestaurant.Controllers
         [HttpGet]
         public ActionResult New()
         {
+            var TipoRestaurante = new TipoRestaurante().SelectTipoRestaurantes();
+            var RangoPrecio = new RangoPrecio().SelectRangoPrecios();
+            var Ciudad = new Ciudad().SelectCiudades();
+
+            List<SelectListItem> TipoRestaurantes = new List<SelectListItem>();
+            foreach (var item in TipoRestaurante)
+            {
+                TipoRestaurantes.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+            }
+
+            List<SelectListItem> RangoPrecios = new List<SelectListItem>();
+            foreach (var item in RangoPrecio)
+            {
+                RangoPrecios.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+            }
+
+            List<SelectListItem> Ciudades = new List<SelectListItem>();
+            foreach (var item in Ciudad)
+            {
+                Ciudades.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+            }
+
+            ViewBag.TipoRestaurantes = TipoRestaurantes;
+            ViewBag.RangoPrecios = RangoPrecios;
+            ViewBag.Ciudades = Ciudades;
+
             return View();
         }
 
@@ -27,6 +53,32 @@ namespace FindMyRestaurant.Controllers
         {
             if (!ModelState.IsValid)
             {
+                var TipoRestaurante = new TipoRestaurante().SelectTipoRestaurantes();
+                var RangoPrecio = new RangoPrecio().SelectRangoPrecios();
+                var Ciudad = new Ciudad().SelectCiudades();
+
+                List<SelectListItem> TipoRestaurantes = new List<SelectListItem>();
+                foreach (var item in TipoRestaurante)
+                {
+                    TipoRestaurantes.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+                }
+
+                List<SelectListItem> RangoPrecios = new List<SelectListItem>();
+                foreach (var item in RangoPrecio)
+                {
+                    RangoPrecios.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+                }
+
+                List<SelectListItem> Ciudades = new List<SelectListItem>();
+                foreach (var item in Ciudad)
+                {
+                    Ciudades.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+                }
+
+                ViewBag.TipoRestaurantes = TipoRestaurantes;
+                ViewBag.RangoPrecios = RangoPrecios;
+                ViewBag.Ciudades = Ciudades;
+
                 return View(model);
             }
 
@@ -42,6 +94,32 @@ namespace FindMyRestaurant.Controllers
         {
             var Restaurante = new Restaurante();
             var model = new RestauranteViewModel();
+
+            var TipoRestaurante = new TipoRestaurante().SelectTipoRestaurantes();
+            var RangoPrecio = new RangoPrecio().SelectRangoPrecios();
+            var Ciudad = new Ciudad().SelectCiudades();
+
+            List<SelectListItem> TipoRestaurantes = new List<SelectListItem>();
+            foreach (var item in TipoRestaurante)
+            {
+                TipoRestaurantes.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+            }
+
+            List<SelectListItem> RangoPrecios = new List<SelectListItem>();
+            foreach (var item in RangoPrecio)
+            {
+                RangoPrecios.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+            }
+
+            List<SelectListItem> Ciudades = new List<SelectListItem>();
+            foreach (var item in Ciudad)
+            {
+                Ciudades.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+            }
+
+            ViewBag.TipoRestaurantes = TipoRestaurantes;
+            ViewBag.RangoPrecios = RangoPrecios;
+            ViewBag.Ciudades = Ciudades;
 
             Restaurante = Restaurante.SelectRestaurante(int.Parse(Id));
 
@@ -64,6 +142,32 @@ namespace FindMyRestaurant.Controllers
         {
             if (!ModelState.IsValid)
             {
+                var TipoRestaurante = new TipoRestaurante().SelectTipoRestaurantes();
+                var RangoPrecio = new RangoPrecio().SelectRangoPrecios();
+                var Ciudad = new Ciudad().SelectCiudades();
+
+                List<SelectListItem> TipoRestaurantes = new List<SelectListItem>();
+                foreach (var item in TipoRestaurante)
+                {
+                    TipoRestaurantes.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+                }
+
+                List<SelectListItem> RangoPrecios = new List<SelectListItem>();
+                foreach (var item in RangoPrecio)
+                {
+                    RangoPrecios.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+                }
+
+                List<SelectListItem> Ciudades = new List<SelectListItem>();
+                foreach (var item in Ciudad)
+                {
+                    Ciudades.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+                }
+
+                ViewBag.TipoRestaurantes = TipoRestaurantes;
+                ViewBag.RangoPrecios = RangoPrecios;
+                ViewBag.Ciudades = Ciudades;
+
                 return View(model);
             }
 
@@ -74,11 +178,13 @@ namespace FindMyRestaurant.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpPost]
-        public void Delete(string Id)
+        [HttpGet]
+        public ActionResult Delete(string Id)
         {
             var Restaurante = new Restaurante();
             Restaurante.DeleteRestaurante(int.Parse(Id));
+
+            return RedirectToAction("Index");
         }
     }
 }

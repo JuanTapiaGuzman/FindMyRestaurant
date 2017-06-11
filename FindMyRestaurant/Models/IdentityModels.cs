@@ -29,5 +29,7 @@ namespace FindMyRestaurant.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<FindMyRestaurant.Models.Ciudad> Ciudads { get; set; }
     }
 }

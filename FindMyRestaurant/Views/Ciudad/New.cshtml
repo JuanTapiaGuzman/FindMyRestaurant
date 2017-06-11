@@ -1,13 +1,13 @@
-﻿@model FindMyRestaurant.Models.ViewModels.TransporteViewModel
+﻿@model FindMyRestaurant.Models.ViewModels.CiudadViewModel
 
 @{
-    ViewBag.Title = "View";
+    ViewBag.Title = "New";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Transporte</h1>
+        <h1 class="page-header">Ciudades</h1>
     </div>
     <!-- /.col-lg-12 -->
 </div>
@@ -16,18 +16,18 @@
     <div class="col-lg-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                Nuevo Transporte
+                Nueva Ciudad
             </div>
             <div class="panel-body">
                 <div class="row">
                     <div class="col-lg-6">
-                        @using (Html.BeginForm("New", "Transporte", FormMethod.Post))
+                        @using (Html.BeginForm("New", "Ciudad", FormMethod.Post))
                         {
                             <div class="form-group">
                                 <label>Nombre:</label>
                                 @Html.TextBoxFor(m => m.Nombre, null, new { @class = "form-control" })
                             </div>
-                           
+
                             <div class="form-group">
                                 <button type="submit">Guardar</button>
                                 @Html.ActionLink("Cancelar", "Index")

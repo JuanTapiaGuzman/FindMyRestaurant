@@ -66,11 +66,13 @@ namespace FindMyRestaurant.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpPost]
-        public void Delete(string Id)
+        [HttpGet]
+        public ActionResult Delete(string Id)
         {
             var Ciudad = new Ciudad();
             Ciudad.DeleteCiudad(int.Parse(Id));
+
+            return RedirectToAction("Index");
         }
     }
 }

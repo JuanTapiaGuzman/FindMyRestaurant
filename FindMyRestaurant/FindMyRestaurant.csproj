@@ -375,10 +375,12 @@
     <Content Include="Views\RangoPrecio\New.cshtml" />
     <Content Include="Views\RangoPrecio\Index.cshtml" />
     <Content Include="Views\RangoPrecio\Edit.cshtml" />
+    <Content Include="Views\Ciudad\Index.cshtml" />
+    <Content Include="Views\Ciudad\New.cshtml" />
+    <Content Include="Views\Ciudad\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Ciudad\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

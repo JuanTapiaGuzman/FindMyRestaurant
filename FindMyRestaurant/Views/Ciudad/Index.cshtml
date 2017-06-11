@@ -1,29 +1,27 @@
-﻿@model FindMyRestaurant.Models.Usuario
+﻿@model FindMyRestaurant.Models.Ciudad
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Listado de Usuarios</h2>
-
+<h2>Ciudad</h2>
 <p>
     @Html.ActionLink("Nuevo", "New")
 </p>
 <table class="table">
     <tr>
         <th>
-            Nombre
+            Nombre :
         </th>
-      
+       
+
         <th></th>
     </tr>
-
-    @foreach (var item in new FindMyRestaurant.Models.Transporte().SelectTransportes())
+    @foreach (var item in new FindMyRestaurant.Models.Ciudad().SelectCiudades())
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Nombre)  
+                @Html.DisplayFor(modelItem => item.Nombre)
             </td>
           
             <td>
@@ -32,5 +30,4 @@
             </td>
         </tr>
     }
-
 </table>
