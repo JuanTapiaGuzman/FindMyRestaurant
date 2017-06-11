@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Listado de Usuarios</h2>
+<h2>Listado de Precio</h2>
 
 <p>
     @Html.ActionLink("Nuevo", "New")
@@ -13,45 +13,37 @@
 <table class="table">
     <tr>
         <th>
-            User
+            Nombre : 
         </th>
         <th>
-            Contraseña
+            Precio mayor :
         </th>
         <th>
-            Nombre
+            Precio Medio : 
         </th>
         <th>
-            Email
+            Precio Menor : 
         </th>
-        <th>
-            Transporte
-        </th>
+        
         <th></th>
     </tr>
 
-    @foreach (var item in new FindMyRestaurant.Models.Usuario().SelectUsuarios())
+    @foreach (var item in new FindMyRestaurant.Models.RangoPrecio().SelectRangoPrecios())
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.User)  
+                @Html.DisplayFor(modelItem => item.Nombre)  
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Contraseña)
+                @Html.DisplayFor(modelItem => item.PrecioMayor)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
+                @Html.DisplayFor(modelItem => item.PrecioMedio)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Email)
+                @Html.DisplayFor(modelItem => item.PrecioMenor)
             </td>
-            <td>
-                @{
-                    var Transporte = new FindMyRestaurant.Models.Transporte().SelectTransporte(item.IdTransporte).Nombre;
-                    
-                }
-                @Transporte
-            </td>
+            
             <td>
                 @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
                 @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
