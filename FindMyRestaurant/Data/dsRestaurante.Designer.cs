@@ -320,8 +320,6 @@ namespace FindMyRestaurant.Data {
             
             private global::System.Data.DataColumn columnIdTipoRestaurante;
             
-            private global::System.Data.DataColumn columnValoracion;
-            
             private global::System.Data.DataColumn columnIdRangoPrecio;
             
             private global::System.Data.DataColumn columnDireccion;
@@ -388,14 +386,6 @@ namespace FindMyRestaurant.Data {
             public global::System.Data.DataColumn IdTipoRestauranteColumn {
                 get {
                     return this.columnIdTipoRestaurante;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ValoracionColumn {
-                get {
-                    return this.columnValoracion;
                 }
             }
             
@@ -484,13 +474,12 @@ namespace FindMyRestaurant.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RestaurantesRow AddRestaurantesRow(string Nombre, int IdTipoRestaurante, double Valoracion, int IdRangoPrecio, string Direccion, int IdCiudad, string Telefono, string LatitudGps, string LongitudGps) {
+            public RestaurantesRow AddRestaurantesRow(string Nombre, int IdTipoRestaurante, int IdRangoPrecio, string Direccion, int IdCiudad, string Telefono, string LatitudGps, string LongitudGps) {
                 RestaurantesRow rowRestaurantesRow = ((RestaurantesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Nombre,
                         IdTipoRestaurante,
-                        Valoracion,
                         IdRangoPrecio,
                         Direccion,
                         IdCiudad,
@@ -529,7 +518,6 @@ namespace FindMyRestaurant.Data {
                 this.columnIdRestaurante = base.Columns["IdRestaurante"];
                 this.columnNombre = base.Columns["Nombre"];
                 this.columnIdTipoRestaurante = base.Columns["IdTipoRestaurante"];
-                this.columnValoracion = base.Columns["Valoracion"];
                 this.columnIdRangoPrecio = base.Columns["IdRangoPrecio"];
                 this.columnDireccion = base.Columns["Direccion"];
                 this.columnIdCiudad = base.Columns["IdCiudad"];
@@ -547,8 +535,6 @@ namespace FindMyRestaurant.Data {
                 base.Columns.Add(this.columnNombre);
                 this.columnIdTipoRestaurante = new global::System.Data.DataColumn("IdTipoRestaurante", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIdTipoRestaurante);
-                this.columnValoracion = new global::System.Data.DataColumn("Valoracion", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnValoracion);
                 this.columnIdRangoPrecio = new global::System.Data.DataColumn("IdRangoPrecio", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIdRangoPrecio);
                 this.columnDireccion = new global::System.Data.DataColumn("Direccion", typeof(string), null, global::System.Data.MappingType.Element);
@@ -572,7 +558,6 @@ namespace FindMyRestaurant.Data {
                 this.columnNombre.AllowDBNull = false;
                 this.columnNombre.MaxLength = 70;
                 this.columnIdTipoRestaurante.AllowDBNull = false;
-                this.columnValoracion.AllowDBNull = false;
                 this.columnIdRangoPrecio.AllowDBNull = false;
                 this.columnDireccion.AllowDBNull = false;
                 this.columnDireccion.MaxLength = 200;
@@ -720,8 +705,6 @@ namespace FindMyRestaurant.Data {
             
             private global::System.Data.DataColumn columnIdTipoRestaurante;
             
-            private global::System.Data.DataColumn columnValoracion;
-            
             private global::System.Data.DataColumn columnIdRangoPrecio;
             
             private global::System.Data.DataColumn columnDireccion;
@@ -788,14 +771,6 @@ namespace FindMyRestaurant.Data {
             public global::System.Data.DataColumn IdTipoRestauranteColumn {
                 get {
                     return this.columnIdTipoRestaurante;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ValoracionColumn {
-                get {
-                    return this.columnValoracion;
                 }
             }
             
@@ -884,13 +859,12 @@ namespace FindMyRestaurant.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RestauranteRow AddRestauranteRow(string Nombre, int IdTipoRestaurante, double Valoracion, int IdRangoPrecio, string Direccion, int IdCiudad, string Telefono, string LatitudGps, string LongitudGps) {
+            public RestauranteRow AddRestauranteRow(string Nombre, int IdTipoRestaurante, int IdRangoPrecio, string Direccion, int IdCiudad, string Telefono, string LatitudGps, string LongitudGps) {
                 RestauranteRow rowRestauranteRow = ((RestauranteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Nombre,
                         IdTipoRestaurante,
-                        Valoracion,
                         IdRangoPrecio,
                         Direccion,
                         IdCiudad,
@@ -929,7 +903,6 @@ namespace FindMyRestaurant.Data {
                 this.columnIdRestaurante = base.Columns["IdRestaurante"];
                 this.columnNombre = base.Columns["Nombre"];
                 this.columnIdTipoRestaurante = base.Columns["IdTipoRestaurante"];
-                this.columnValoracion = base.Columns["Valoracion"];
                 this.columnIdRangoPrecio = base.Columns["IdRangoPrecio"];
                 this.columnDireccion = base.Columns["Direccion"];
                 this.columnIdCiudad = base.Columns["IdCiudad"];
@@ -947,8 +920,6 @@ namespace FindMyRestaurant.Data {
                 base.Columns.Add(this.columnNombre);
                 this.columnIdTipoRestaurante = new global::System.Data.DataColumn("IdTipoRestaurante", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIdTipoRestaurante);
-                this.columnValoracion = new global::System.Data.DataColumn("Valoracion", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnValoracion);
                 this.columnIdRangoPrecio = new global::System.Data.DataColumn("IdRangoPrecio", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIdRangoPrecio);
                 this.columnDireccion = new global::System.Data.DataColumn("Direccion", typeof(string), null, global::System.Data.MappingType.Element);
@@ -972,7 +943,6 @@ namespace FindMyRestaurant.Data {
                 this.columnNombre.AllowDBNull = false;
                 this.columnNombre.MaxLength = 70;
                 this.columnIdTipoRestaurante.AllowDBNull = false;
-                this.columnValoracion.AllowDBNull = false;
                 this.columnIdRangoPrecio.AllowDBNull = false;
                 this.columnDireccion.AllowDBNull = false;
                 this.columnDireccion.MaxLength = 200;
@@ -1156,17 +1126,6 @@ namespace FindMyRestaurant.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double Valoracion {
-                get {
-                    return ((double)(this[this.tableRestaurantes.ValoracionColumn]));
-                }
-                set {
-                    this[this.tableRestaurantes.ValoracionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int IdRangoPrecio {
                 get {
                     return ((int)(this[this.tableRestaurantes.IdRangoPrecioColumn]));
@@ -1310,17 +1269,6 @@ namespace FindMyRestaurant.Data {
                 }
                 set {
                     this[this.tableRestaurante.IdTipoRestauranteColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double Valoracion {
-                get {
-                    return ((double)(this[this.tableRestaurante.ValoracionColumn]));
-                }
-                set {
-                    this[this.tableRestaurante.ValoracionColumn] = value;
                 }
             }
             
@@ -1621,7 +1569,6 @@ namespace FindMyRestaurant.Data.dsRestauranteTableAdapters {
             tableMapping.ColumnMappings.Add("IdRestaurante", "IdRestaurante");
             tableMapping.ColumnMappings.Add("Nombre", "Nombre");
             tableMapping.ColumnMappings.Add("IdTipoRestaurante", "IdTipoRestaurante");
-            tableMapping.ColumnMappings.Add("Valoracion", "Valoracion");
             tableMapping.ColumnMappings.Add("IdRangoPrecio", "IdRangoPrecio");
             tableMapping.ColumnMappings.Add("Direccion", "Direccion");
             tableMapping.ColumnMappings.Add("IdCiudad", "IdCiudad");
@@ -2040,7 +1987,6 @@ namespace FindMyRestaurant.Data.dsRestauranteTableAdapters {
             tableMapping.ColumnMappings.Add("IdRestaurante", "IdRestaurante");
             tableMapping.ColumnMappings.Add("Nombre", "Nombre");
             tableMapping.ColumnMappings.Add("IdTipoRestaurante", "IdTipoRestaurante");
-            tableMapping.ColumnMappings.Add("Valoracion", "Valoracion");
             tableMapping.ColumnMappings.Add("IdRangoPrecio", "IdRangoPrecio");
             tableMapping.ColumnMappings.Add("Direccion", "Direccion");
             tableMapping.ColumnMappings.Add("IdCiudad", "IdCiudad");

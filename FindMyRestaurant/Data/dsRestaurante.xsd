@@ -24,7 +24,6 @@
               <Mapping SourceColumn="IdRestaurante" DataSetColumn="IdRestaurante" />
               <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
               <Mapping SourceColumn="IdTipoRestaurante" DataSetColumn="IdTipoRestaurante" />
-              <Mapping SourceColumn="Valoracion" DataSetColumn="Valoracion" />
               <Mapping SourceColumn="IdRangoPrecio" DataSetColumn="IdRangoPrecio" />
               <Mapping SourceColumn="Direccion" DataSetColumn="Direccion" />
               <Mapping SourceColumn="IdCiudad" DataSetColumn="IdCiudad" />
@@ -114,7 +113,6 @@
               <Mapping SourceColumn="IdRestaurante" DataSetColumn="IdRestaurante" />
               <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
               <Mapping SourceColumn="IdTipoRestaurante" DataSetColumn="IdTipoRestaurante" />
-              <Mapping SourceColumn="Valoracion" DataSetColumn="Valoracion" />
               <Mapping SourceColumn="IdRangoPrecio" DataSetColumn="IdRangoPrecio" />
               <Mapping SourceColumn="Direccion" DataSetColumn="Direccion" />
               <Mapping SourceColumn="IdCiudad" DataSetColumn="IdCiudad" />
@@ -132,7 +130,7 @@
   <xs:element name="dsRestaurante" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsRestaurante" msprop:Generator_UserDSName="dsRestaurante">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Restaurantes" msprop:Generator_TableClassName="RestaurantesDataTable" msprop:Generator_TableVarName="tableRestaurantes" msprop:Generator_RowChangedName="RestaurantesRowChanged" msprop:Generator_TablePropName="Restaurantes" msprop:Generator_RowDeletingName="RestaurantesRowDeleting" msprop:Generator_RowChangingName="RestaurantesRowChanging" msprop:Generator_RowEvHandlerName="RestaurantesRowChangeEventHandler" msprop:Generator_RowDeletedName="RestaurantesRowDeleted" msprop:Generator_RowClassName="RestaurantesRow" msprop:Generator_UserTableName="Restaurantes" msprop:Generator_RowEvArgName="RestaurantesRowChangeEvent">
+        <xs:element name="Restaurantes" msprop:Generator_TableClassName="RestaurantesDataTable" msprop:Generator_TableVarName="tableRestaurantes" msprop:Generator_TablePropName="Restaurantes" msprop:Generator_RowDeletingName="RestaurantesRowDeleting" msprop:Generator_RowChangingName="RestaurantesRowChanging" msprop:Generator_RowEvHandlerName="RestaurantesRowChangeEventHandler" msprop:Generator_RowDeletedName="RestaurantesRowDeleted" msprop:Generator_UserTableName="Restaurantes" msprop:Generator_RowChangedName="RestaurantesRowChanged" msprop:Generator_RowEvArgName="RestaurantesRowChangeEvent" msprop:Generator_RowClassName="RestaurantesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdRestaurante" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdRestaurante" msprop:Generator_ColumnPropNameInRow="IdRestaurante" msprop:Generator_ColumnPropNameInTable="IdRestauranteColumn" msprop:Generator_UserColumnName="IdRestaurante" type="xs:int" />
@@ -144,7 +142,6 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="IdTipoRestaurante" msprop:Generator_ColumnVarNameInTable="columnIdTipoRestaurante" msprop:Generator_ColumnPropNameInRow="IdTipoRestaurante" msprop:Generator_ColumnPropNameInTable="IdTipoRestauranteColumn" msprop:Generator_UserColumnName="IdTipoRestaurante" type="xs:int" />
-              <xs:element name="Valoracion" msprop:Generator_ColumnVarNameInTable="columnValoracion" msprop:Generator_ColumnPropNameInRow="Valoracion" msprop:Generator_ColumnPropNameInTable="ValoracionColumn" msprop:Generator_UserColumnName="Valoracion" type="xs:double" />
               <xs:element name="IdRangoPrecio" msprop:Generator_ColumnVarNameInTable="columnIdRangoPrecio" msprop:Generator_ColumnPropNameInRow="IdRangoPrecio" msprop:Generator_ColumnPropNameInTable="IdRangoPrecioColumn" msprop:Generator_UserColumnName="IdRangoPrecio" type="xs:int" />
               <xs:element name="Direccion" msprop:Generator_ColumnVarNameInTable="columnDireccion" msprop:Generator_ColumnPropNameInRow="Direccion" msprop:Generator_ColumnPropNameInTable="DireccionColumn" msprop:Generator_UserColumnName="Direccion">
                 <xs:simpleType>
@@ -178,7 +175,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Restaurante" msprop:Generator_TableClassName="RestauranteDataTable" msprop:Generator_TableVarName="tableRestaurante" msprop:Generator_TablePropName="Restaurante" msprop:Generator_RowDeletingName="RestauranteRowDeleting" msprop:Generator_RowChangingName="RestauranteRowChanging" msprop:Generator_RowEvHandlerName="RestauranteRowChangeEventHandler" msprop:Generator_RowDeletedName="RestauranteRowDeleted" msprop:Generator_UserTableName="Restaurante" msprop:Generator_RowChangedName="RestauranteRowChanged" msprop:Generator_RowEvArgName="RestauranteRowChangeEvent" msprop:Generator_RowClassName="RestauranteRow">
+        <xs:element name="Restaurante" msprop:Generator_TableClassName="RestauranteDataTable" msprop:Generator_TableVarName="tableRestaurante" msprop:Generator_RowChangedName="RestauranteRowChanged" msprop:Generator_TablePropName="Restaurante" msprop:Generator_RowDeletingName="RestauranteRowDeleting" msprop:Generator_RowChangingName="RestauranteRowChanging" msprop:Generator_RowEvHandlerName="RestauranteRowChangeEventHandler" msprop:Generator_RowDeletedName="RestauranteRowDeleted" msprop:Generator_RowClassName="RestauranteRow" msprop:Generator_UserTableName="Restaurante" msprop:Generator_RowEvArgName="RestauranteRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdRestaurante" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdRestaurante" msprop:Generator_ColumnPropNameInRow="IdRestaurante" msprop:Generator_ColumnPropNameInTable="IdRestauranteColumn" msprop:Generator_UserColumnName="IdRestaurante" type="xs:int" />
@@ -190,7 +187,6 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="IdTipoRestaurante" msprop:Generator_ColumnVarNameInTable="columnIdTipoRestaurante" msprop:Generator_ColumnPropNameInRow="IdTipoRestaurante" msprop:Generator_ColumnPropNameInTable="IdTipoRestauranteColumn" msprop:Generator_UserColumnName="IdTipoRestaurante" type="xs:int" />
-              <xs:element name="Valoracion" msprop:Generator_ColumnVarNameInTable="columnValoracion" msprop:Generator_ColumnPropNameInRow="Valoracion" msprop:Generator_ColumnPropNameInTable="ValoracionColumn" msprop:Generator_UserColumnName="Valoracion" type="xs:double" />
               <xs:element name="IdRangoPrecio" msprop:Generator_ColumnVarNameInTable="columnIdRangoPrecio" msprop:Generator_ColumnPropNameInRow="IdRangoPrecio" msprop:Generator_ColumnPropNameInTable="IdRangoPrecioColumn" msprop:Generator_UserColumnName="IdRangoPrecio" type="xs:int" />
               <xs:element name="Direccion" msprop:Generator_ColumnVarNameInTable="columnDireccion" msprop:Generator_ColumnPropNameInRow="Direccion" msprop:Generator_ColumnPropNameInTable="DireccionColumn" msprop:Generator_UserColumnName="Direccion">
                 <xs:simpleType>
