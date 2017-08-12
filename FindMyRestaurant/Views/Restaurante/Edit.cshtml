@@ -43,10 +43,6 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Valoración: </label>
-                                @Html.TextBoxFor(m => m.Valoracion, null, new { @class = "form-control", @type = "number" })
-                            </div>
-                            <div class="form-group">
                                 <label>Rango de Precio:</label>
                                 <select class="form-control input-xlarge" name="IdRangoPrecio">
                                     @foreach (var obj in ViewBag.RangoPrecios)

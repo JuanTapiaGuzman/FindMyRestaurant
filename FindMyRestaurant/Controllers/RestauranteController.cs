@@ -126,7 +126,6 @@ namespace FindMyRestaurant.Controllers
             model.Id = Restaurante.Id;
             model.Nombre = Restaurante.Nombre;
             model.IdTipoRestaurante = Restaurante.IdTipoRestaurante;
-            model.Valoracion = Restaurante.Valoracion;
             model.IdRangoPrecio = Restaurante.IdRangoPrecio;
             model.Direccion = Restaurante.Direccion;
             model.IdCiudad = Restaurante.IdCiudad;

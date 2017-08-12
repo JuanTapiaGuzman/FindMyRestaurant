@@ -10,7 +10,6 @@ namespace FindMyRestaurant.Models
         public int Id { get; set; }
         public string Nombre { get; set; }
         public int IdTipoRestaurante { get; set; }
-        public double Valoracion { get; set; }
         public int IdRangoPrecio { get; set; }
         public string Direccion { get; set; }
         public int IdCiudad { get; set; }
@@ -34,7 +33,6 @@ namespace FindMyRestaurant.Models
                 Restaurante.Id = data.IdRestaurante;
                 Restaurante.Nombre = data.Nombre;
                 Restaurante.IdTipoRestaurante = data.IdTipoRestaurante;
-                Restaurante.Valoracion = data.Valoracion;
                 Restaurante.IdRangoPrecio = data.IdRangoPrecio;
                 Restaurante.Direccion = data.Direccion;
                 Restaurante.IdCiudad = data.IdCiudad;
@@ -63,7 +61,6 @@ namespace FindMyRestaurant.Models
                 Restaurante.Id = data.IdRestaurante;
                 Restaurante.Nombre = data.Nombre;
                 Restaurante.IdTipoRestaurante = data.IdTipoRestaurante;
-                Restaurante.Valoracion = data.Valoracion;
                 Restaurante.IdRangoPrecio = data.IdRangoPrecio;
                 Restaurante.Direccion = data.Direccion;
                 Restaurante.IdCiudad = data.IdCiudad;
