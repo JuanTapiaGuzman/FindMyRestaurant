@@ -69,11 +69,13 @@ namespace FindMyRestaurant.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpPost]
-        public void Delete(string Id)
+        [HttpGet]
+        public ActionResult Delete(string Id)
         {
             var RangoPrecio = new RangoPrecio();
             RangoPrecio.DeleteRangoPrecio(int.Parse(Id));
+
+            return RedirectToAction("Index");
         }
 
 

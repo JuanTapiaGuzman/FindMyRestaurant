@@ -40,10 +40,10 @@ namespace FindMyRestaurant.Models
             return Usuarios;
         }
 
-        public Usuario SelectUsuario(int? Id)
+        public Usuario SelectUsuario(int? id)
         {
             Data.dsUsuarioTableAdapters.UsuarioTableAdapter adapter = new Data.dsUsuarioTableAdapters.UsuarioTableAdapter();
-            Data.dsUsuario.UsuarioDataTable dt = adapter.SelectUsuario(Id);
+            Data.dsUsuario.UsuarioDataTable dt = adapter.SelectUsuario(id);
 
             var Usuario = new Usuario();
             if (dt.Rows.Count == 0)
@@ -64,19 +64,19 @@ namespace FindMyRestaurant.Models
             return Usuario;
         }
 
-        public void InsertUsuario(string User, string Contraseña, string Nombre, string Email, int IdTransporte)
+        public void InsertUsuario(string user, string contraseña, string nombre, string email, int idTransporte)
         {
             Data.dsUsuarioTableAdapters.UsuariosTableAdapter adapter = new Data.dsUsuarioTableAdapters.UsuariosTableAdapter();
             adapter.InsertUsuario(Nombre, User, Contraseña, Email, IdTransporte);
         }
 
-        public void UpdateUsuario(string User, string Contraseña, string Nombre, string Email, int IdTransporte)
+        public void UpdateUsuario(int id, string user, string contraseña, string nombre, string email, int idTransporte)
         {
             Data.dsUsuarioTableAdapters.UsuariosTableAdapter adapter = new Data.dsUsuarioTableAdapters.UsuariosTableAdapter();
-            adapter.UpdateUsuario(Id, Nombre, User, Contraseña, Email, IdTransporte);
+            adapter.UpdateUsuario(id, nombre, user, contraseña, email, idTransporte);
         }
 
-        public void DeleteUsuario(int? Id)
+        public void DeleteUsuario(int? id)
         {
             Data.dsUsuarioTableAdapters.UsuariosTableAdapter adapter = new Data.dsUsuarioTableAdapters.UsuariosTableAdapter();
             adapter.DeleteUsuario(Id);

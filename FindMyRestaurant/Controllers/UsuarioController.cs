@@ -118,7 +118,7 @@ namespace FindMyRestaurant.Controllers
 
             var Usuario = new Usuario();
 
-            Usuario.UpdateUsuario(model.User, model.Contraseña, model.Nombre, model.Email, model.IdTransporte);
+            Usuario.UpdateUsuario(model.Id, model.User, model.Contraseña, model.Nombre, model.Email, model.IdTransporte);
 
             return RedirectToAction("Index");
         }

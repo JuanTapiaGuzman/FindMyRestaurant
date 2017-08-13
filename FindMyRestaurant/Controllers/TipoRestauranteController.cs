@@ -67,7 +67,7 @@ namespace FindMyRestaurant.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpPost]
+        [HttpGet]
         public void Delete(string Id)
         {
             var TipoRestaurante = new TipoRestaurante();

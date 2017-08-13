@@ -25,21 +25,20 @@
                         {
                             <div class="form-group">
                                 <label>Nombre:</label>
-                                @Html.TextBoxFor(m => m.Nombre , null, new { @class = "form-control" })
+                                @Html.TextBoxFor(m => m.Nombre, null, new { @class = "form-control" })
                             </div>
                             <div class="form-group">
-                                <label>Mayor Precio</label>
+                                <label>Rango de Precio mayor:</label>
                                 @Html.TextBoxFor(m => m.PrecioMayor, null, new { @class = "form-control" })
                             </div>
                             <div class="form-group">
-                                <label>Precio medio</label>
+                                <label>Rango de precio medio</label>
                                 @Html.TextBoxFor(m => m.PrecioMedio, null, new { @class = "form-control" })
                             </div>
                             <div class="form-group">
-                                <label>Precio Menor</label>
+                                <label>Rango de precio menor</label>
                                 @Html.TextBoxFor(m => m.PrecioMenor, null, new { @class = "form-control" })
                             </div>
-                            
 
                             <div class="form-group">
                                 <button type="submit">Guardar</button>
