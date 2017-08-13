@@ -84,7 +84,7 @@ namespace FindMyRestaurant.Controllers
 
             var Restaurante = new Restaurante();
 
-            Restaurante.InsertRestaurante(model.Nombre, model.IdTipoRestaurante, model.Valoracion, model.IdRangoPrecio, model.Direccion, model.IdCiudad, model.Telefono, model.LatitudGps, model.LongitudGps);
+            Restaurante.InsertRestaurante(model.Nombre, model.IdTipoRestaurante, model.IdRangoPrecio, model.Direccion, model.IdCiudad, model.Telefono, model.LatitudGps, model.LongitudGps);
 
             return RedirectToAction("Index");
         }
@@ -214,7 +214,7 @@ namespace FindMyRestaurant.Controllers
 
             var Restaurante = new Restaurante();
 
-            Restaurante.UpdateRestaurante(model.Id, model.Nombre, model.IdTipoRestaurante, model.Valoracion, model.IdRangoPrecio, model.Direccion, model.IdCiudad, model.Telefono, model.LatitudGps, model.LongitudGps);
+            Restaurante.UpdateRestaurante(model.Id, model.Nombre, model.IdTipoRestaurante, model.IdRangoPrecio, model.Direccion, model.IdCiudad, model.Telefono, model.LatitudGps, model.LongitudGps);
 
             return RedirectToAction("Index");
         }

@@ -18,9 +18,6 @@ namespace FindMyRestaurant.Models.ViewModels
         public int IdTipoRestaurante { get; set; }
 
         [Required(ErrorMessage = "Es Obligatorio")]
-        public double Valoracion { get; set; }
-
-        [Required(ErrorMessage = "Es Obligatorio")]
         public int IdRangoPrecio { get; set; }
 
         [Required(ErrorMessage = "Es Obligatorio")]
