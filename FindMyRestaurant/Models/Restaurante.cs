@@ -73,22 +73,22 @@ namespace FindMyRestaurant.Models
             return Restaurante;
         }
 
-        public void InsertRestaurante(string Nombre, int IdTipoRestaurante, double Valoracion, int IdRangoPrecio, string Direccion, int IdCiudad, string Telefono, string LatitudGps, string LongitudGps)
+        public void InsertRestaurante(string nombre, int idTipoRestaurante, double valoracion, int idRangoPrecio, string direccion, int idCiudad, string telefono, string latitudGps, string longitudGps)
         {
             Data.dsRestauranteTableAdapters.RestaurantesTableAdapter adapter = new Data.dsRestauranteTableAdapters.RestaurantesTableAdapter();
-            adapter.InsertRestaurante(Nombre, IdTipoRestaurante, Valoracion, IdRangoPrecio, Direccion, IdCiudad, Telefono, LatitudGps, LongitudGps);
+            adapter.InsertRestaurante(nombre, idTipoRestaurante, valoracion, idRangoPrecio, direccion, idCiudad, telefono, latitudGps, longitudGps);
         }
 
-        public void UpdateRestaurante(int? Id, string Nombre, int IdTipoRestaurante, double Valoracion, int IdRangoPrecio, string Direccion, int IdCiudad, string Telefono, string LatitudGps, string LongitudGps)
+        public void UpdateRestaurante(int? id, string nombre, int idTipoRestaurante, double valoracion, int idRangoPrecio, string direccion, int idCiudad, string telefono, string latitudGps, string longitudGps)
         {
             Data.dsRestauranteTableAdapters.RestaurantesTableAdapter adapter = new Data.dsRestauranteTableAdapters.RestaurantesTableAdapter();
-            adapter.UpdateRestaurante(Id, Nombre, IdTipoRestaurante, Valoracion, IdRangoPrecio, Direccion, IdCiudad, Telefono, LatitudGps, LongitudGps);
+            adapter.UpdateRestaurante(id, nombre, idTipoRestaurante, valoracion, idRangoPrecio, direccion, idCiudad, telefono, latitudGps, longitudGps);
         }
 
-        public void DeleteRestaurante(int? Id)
+        public void DeleteRestaurante(int? id)
         {
             Data.dsRestauranteTableAdapters.RestaurantesTableAdapter adapter = new Data.dsRestauranteTableAdapters.RestaurantesTableAdapter();
-            adapter.DeleteRestaurante(Id);
+            adapter.DeleteRestaurante(id);
         }
     }
 }

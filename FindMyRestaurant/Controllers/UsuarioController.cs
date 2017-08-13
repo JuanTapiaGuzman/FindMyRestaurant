@@ -75,7 +75,7 @@ namespace FindMyRestaurant.Controllers
 
             foreach (var item in Transporte)
             {
-                if(item.SelectTransporte(model.Id).Id == item.Id)
+                if(Usuario.IdTransporte == item.Id)
                 {
                     Transportes.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString(), Selected = true });
                 }
