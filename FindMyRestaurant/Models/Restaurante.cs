@@ -73,16 +73,16 @@ namespace FindMyRestaurant.Models
             return Restaurante;
         }
 
-        public void InsertRestaurante(string nombre, int idTipoRestaurante, double valoracion, int idRangoPrecio, string direccion, int idCiudad, string telefono, string latitudGps, string longitudGps)
+        public void InsertRestaurante(string nombre, int idTipoRestaurante, int idRangoPrecio, string direccion, int idCiudad, string telefono, string latitudGps, string longitudGps)
         {
             Data.dsRestauranteTableAdapters.RestaurantesTableAdapter adapter = new Data.dsRestauranteTableAdapters.RestaurantesTableAdapter();
-            adapter.InsertRestaurante(nombre, idTipoRestaurante, valoracion, idRangoPrecio, direccion, idCiudad, telefono, latitudGps, longitudGps);
+            adapter.InsertRestaurante(nombre, idTipoRestaurante, idRangoPrecio, direccion, idCiudad, telefono, latitudGps, longitudGps);
         }
 
-        public void UpdateRestaurante(int? id, string nombre, int idTipoRestaurante, double valoracion, int idRangoPrecio, string direccion, int idCiudad, string telefono, string latitudGps, string longitudGps)
+        public void UpdateRestaurante(int? id, string nombre, int idTipoRestaurante, int idRangoPrecio, string direccion, int idCiudad, string telefono, string latitudGps, string longitudGps)
         {
             Data.dsRestauranteTableAdapters.RestaurantesTableAdapter adapter = new Data.dsRestauranteTableAdapters.RestaurantesTableAdapter();
-            adapter.UpdateRestaurante(id, nombre, idTipoRestaurante, valoracion, idRangoPrecio, direccion, idCiudad, telefono, latitudGps, longitudGps);
+            adapter.UpdateRestaurante(id, nombre, idTipoRestaurante, idRangoPrecio, direccion, idCiudad, telefono, latitudGps, longitudGps);
         }
 
         public void DeleteRestaurante(int? id)

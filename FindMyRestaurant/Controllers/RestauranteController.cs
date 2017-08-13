@@ -95,6 +95,8 @@ namespace FindMyRestaurant.Controllers
             var Restaurante = new Restaurante();
             var model = new RestauranteViewModel();
 
+            Restaurante = Restaurante.SelectRestaurante(int.Parse(Id));
+
             var TipoRestaurante = new TipoRestaurante().SelectTipoRestaurantes();
             var RangoPrecio = new RangoPrecio().SelectRangoPrecios();
             var Ciudad = new Ciudad().SelectCiudades();
@@ -102,26 +104,45 @@ namespace FindMyRestaurant.Controllers
             List<SelectListItem> TipoRestaurantes = new List<SelectListItem>();
             foreach (var item in TipoRestaurante)
             {
-                TipoRestaurantes.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+                if(Restaurante.IdTipoRestaurante == item.Id)
+                {
+                    TipoRestaurantes.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString(), Selected = true });
+                }
+                else
+                {
+                    TipoRestaurantes.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+                }
             }
 
             List<SelectListItem> RangoPrecios = new List<SelectListItem>();
             foreach (var item in RangoPrecio)
             {
-                RangoPrecios.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+                if (Restaurante.IdRangoPrecio == item.Id)
+                {
+                    RangoPrecios.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString(), Selected = true });
+                }
+                else
+                {
+                    RangoPrecios.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+                }
             }
 
             List<SelectListItem> Ciudades = new List<SelectListItem>();
             foreach (var item in Ciudad)
             {
-                Ciudades.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+                if(Restaurante.IdCiudad == item.Id)
+                {
+                    Ciudades.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString(), Selected = true });
+                }
+                else
+                {
+                    Ciudades.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+                }
             }
 
             ViewBag.TipoRestaurantes = TipoRestaurantes;
             ViewBag.RangoPrecios = RangoPrecios;
             ViewBag.Ciudades = Ciudades;
-
-            Restaurante = Restaurante.SelectRestaurante(int.Parse(Id));
 
             model.Id = Restaurante.Id;
             model.Nombre = Restaurante.Nombre;
@@ -148,19 +169,40 @@ namespace FindMyRestaurant.Controllers
                 List<SelectListItem> TipoRestaurantes = new List<SelectListItem>();
                 foreach (var item in TipoRestaurante)
                 {
-                    TipoRestaurantes.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+                    if (model.IdTipoRestaurante == item.Id)
+                    {
+                        TipoRestaurantes.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString(), Selected = true });
+                    }
+                    else
+                    {
+                        TipoRestaurantes.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+                    }
                 }
 
                 List<SelectListItem> RangoPrecios = new List<SelectListItem>();
                 foreach (var item in RangoPrecio)
                 {
-                    RangoPrecios.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+                    if (model.IdRangoPrecio == item.Id)
+                    {
+                        RangoPrecios.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString(), Selected = true });
+                    }
+                    else
+                    {
+                        RangoPrecios.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+                    }
                 }
 
                 List<SelectListItem> Ciudades = new List<SelectListItem>();
                 foreach (var item in Ciudad)
                 {
-                    Ciudades.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+                    if (model.IdCiudad == item.Id)
+                    {
+                        Ciudades.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString(), Selected = true });
+                    }
+                    else
+                    {
+                        Ciudades.Add(new SelectListItem { Text = item.Nombre, Value = item.Id.ToString() });
+                    }
                 }
 
                 ViewBag.TipoRestaurantes = TipoRestaurantes;

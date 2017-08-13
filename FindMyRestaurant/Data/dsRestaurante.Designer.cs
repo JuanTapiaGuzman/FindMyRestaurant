@@ -1607,7 +1607,6 @@ namespace FindMyRestaurant.Data.dsRestauranteTableAdapters {
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdTipoRestaurante", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Valoracion", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 53, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdRangoPrecio", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Direccion", global::System.Data.SqlDbType.VarChar, 200, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdCiudad", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1628,7 +1627,6 @@ namespace FindMyRestaurant.Data.dsRestauranteTableAdapters {
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdRestaurante", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdTipoRestaurante", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Valoracion", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 53, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdRangoPrecio", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Direccion", global::System.Data.SqlDbType.VarChar, 200, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdCiudad", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1679,7 +1677,7 @@ namespace FindMyRestaurant.Data.dsRestauranteTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int InsertRestaurante(string Nombre, global::System.Nullable<int> IdTipoRestaurante, global::System.Nullable<double> Valoracion, global::System.Nullable<int> IdRangoPrecio, string Direccion, global::System.Nullable<int> IdCiudad, string Telefono, string LatitudGps, string LongitudGps) {
+        public virtual int InsertRestaurante(string Nombre, global::System.Nullable<int> IdTipoRestaurante, global::System.Nullable<int> IdRangoPrecio, string Direccion, global::System.Nullable<int> IdCiudad, string Telefono, string LatitudGps, string LongitudGps) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((Nombre == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
@@ -1693,47 +1691,41 @@ namespace FindMyRestaurant.Data.dsRestauranteTableAdapters {
             else {
                 command.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Valoracion.HasValue == true)) {
-                command.Parameters[3].Value = ((double)(Valoracion.Value));
+            if ((IdRangoPrecio.HasValue == true)) {
+                command.Parameters[3].Value = ((int)(IdRangoPrecio.Value));
             }
             else {
                 command.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((IdRangoPrecio.HasValue == true)) {
-                command.Parameters[4].Value = ((int)(IdRangoPrecio.Value));
-            }
-            else {
+            if ((Direccion == null)) {
                 command.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Direccion == null)) {
-                command.Parameters[5].Value = global::System.DBNull.Value;
-            }
             else {
-                command.Parameters[5].Value = ((string)(Direccion));
+                command.Parameters[4].Value = ((string)(Direccion));
             }
             if ((IdCiudad.HasValue == true)) {
-                command.Parameters[6].Value = ((int)(IdCiudad.Value));
+                command.Parameters[5].Value = ((int)(IdCiudad.Value));
             }
             else {
-                command.Parameters[6].Value = global::System.DBNull.Value;
+                command.Parameters[5].Value = global::System.DBNull.Value;
             }
             if ((Telefono == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(Telefono));
+            }
+            if ((LatitudGps == null)) {
                 command.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[7].Value = ((string)(Telefono));
+                command.Parameters[7].Value = ((string)(LatitudGps));
             }
-            if ((LatitudGps == null)) {
+            if ((LongitudGps == null)) {
                 command.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[8].Value = ((string)(LatitudGps));
-            }
-            if ((LongitudGps == null)) {
-                command.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[9].Value = ((string)(LongitudGps));
+                command.Parameters[8].Value = ((string)(LongitudGps));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1783,7 +1775,7 @@ namespace FindMyRestaurant.Data.dsRestauranteTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int UpdateRestaurante(global::System.Nullable<int> IdRestaurante, string Nombre, global::System.Nullable<int> IdTipoRestaurante, global::System.Nullable<double> Valoracion, global::System.Nullable<int> IdRangoPrecio, string Direccion, global::System.Nullable<int> IdCiudad, string Telefono, string LatitudGps, string LongitudGps) {
+        public virtual int UpdateRestaurante(global::System.Nullable<int> IdRestaurante, string Nombre, global::System.Nullable<int> IdTipoRestaurante, global::System.Nullable<int> IdRangoPrecio, string Direccion, global::System.Nullable<int> IdCiudad, string Telefono, string LatitudGps, string LongitudGps) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             if ((IdRestaurante.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(IdRestaurante.Value));
@@ -1803,47 +1795,41 @@ namespace FindMyRestaurant.Data.dsRestauranteTableAdapters {
             else {
                 command.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Valoracion.HasValue == true)) {
-                command.Parameters[4].Value = ((double)(Valoracion.Value));
+            if ((IdRangoPrecio.HasValue == true)) {
+                command.Parameters[4].Value = ((int)(IdRangoPrecio.Value));
             }
             else {
                 command.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((IdRangoPrecio.HasValue == true)) {
-                command.Parameters[5].Value = ((int)(IdRangoPrecio.Value));
-            }
-            else {
+            if ((Direccion == null)) {
                 command.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Direccion == null)) {
-                command.Parameters[6].Value = global::System.DBNull.Value;
-            }
             else {
-                command.Parameters[6].Value = ((string)(Direccion));
+                command.Parameters[5].Value = ((string)(Direccion));
             }
             if ((IdCiudad.HasValue == true)) {
-                command.Parameters[7].Value = ((int)(IdCiudad.Value));
+                command.Parameters[6].Value = ((int)(IdCiudad.Value));
             }
             else {
-                command.Parameters[7].Value = global::System.DBNull.Value;
+                command.Parameters[6].Value = global::System.DBNull.Value;
             }
             if ((Telefono == null)) {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[7].Value = ((string)(Telefono));
+            }
+            if ((LatitudGps == null)) {
                 command.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[8].Value = ((string)(Telefono));
+                command.Parameters[8].Value = ((string)(LatitudGps));
             }
-            if ((LatitudGps == null)) {
+            if ((LongitudGps == null)) {
                 command.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[9].Value = ((string)(LatitudGps));
-            }
-            if ((LongitudGps == null)) {
-                command.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[10].Value = ((string)(LongitudGps));
+                command.Parameters[9].Value = ((string)(LongitudGps));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
